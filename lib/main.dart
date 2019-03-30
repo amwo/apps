@@ -1,34 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
-void main() => runApp(App());
+// Screens
+import 'package:apps/screens/home.dart';
 
-class App extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-                title: 'Welcome to Flutter',
-                home: Scaffold(
-                        appBar: AppBar(
-                                title: Text('Title'),
-                        ),
-                        body: Center(
-                                child: TestComponent(),
-                        ),
-                ),
-        );
-    }
-}
+// States Management
+import 'package:rxdart/rxdart.dart';
 
-class TestComponent extends StatefulWidget {
-    @override
-    TestComponentState createState() => new TestComponentState();
-}
-
-class TestComponentState extends State<TestComponent> {
-    @override
-    Widget build(BuildContext context) {
-        final wordPair = WordPair.random();
-        return Text(wordPair.asPascalCase);
-    }
-}
+void main() => runApp(new Home());
