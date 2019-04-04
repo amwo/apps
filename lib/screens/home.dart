@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
     return new MaterialApp(
       home: new Scaffold(
           appBar: new AppBar(
-            title: new Text('App'),
+            title: new Text('Example'),
           ),
           body: new TestList()),
     );
